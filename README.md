@@ -8,17 +8,15 @@ Celem projektu jest opracowanie modelu regresyjnego, który będzie przewidywał
 4. Ewaluację modelu za pomocą Średniego Błędu Bezwzględnego (MAE), Średniego Błędu Kwadratowego (MSE) oraz współczynnika determinacji R².
 5. Optymalizację modelu z użyciem GridSearchCV do strojenia hiperparametrów.
 
-
 ## Przygotowanie danych oraz wizualizacje
-Wstępna analiza obejmowała wczytanie oraz eksplorację danych, aby zrozumieć dostępne zmienne i potencjalne braki danych.
+* Zbiór danych wczytałam przy pomocy biblioteki pandas. Okazało się, że dane są kompletne, jednak na wszelki wypadek zastosowałam imputację brakujących wartości za pomocą średniej. 
+* W zbiorze danych znajdują się zmienne kategoryczne (np. gender, region), które są tekstowe. Modele uczenia maszynowego wymagają wartości numerycznych, dlatego zastosowałam kodowanie one-hot, dzięki któremu zmieniłam zmienne kategoryczne na wartości numeryczne. 
+* Usunełam kolumnę 'rownames', ponieważ mogłaby ona zmienić ostateczme wyniki.
+* Przeprowadziłam standaryzację w celu spójności danych.  
 
 W celu lepszego zrozumienia danych przygotowałam wykresy:
 * Zmienne Numeryczne: Histogramy dla każdej zmiennej numerycznej.
 * Zmienne Kategoryczne: Wykresy liczności dla każdej zmiennej kategorycznej.
-
-## Przetwarzanie danych
-Zmieniłam zmienne kategoryczne na wartości numeryczne przy użyciu kodowania one-hot. Usunełam kolumnę 'rownames', ponieważ mogłaby ona zmienić ostateczme wyniki. Dane nie posiadały żadnych pustych pól, więc pominełam uzupełnianie wartości.
-Przeprowadziłam standaryzację w celu spójności danych. 
 
 ## Trenowanie i ocena modelu
 Do trenowania wybrałam model RandomForestRegressor ze względu na jego odpornośćna przuczenie oraz zdolność obsługi różnorodnych typów danych.
