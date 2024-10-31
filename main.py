@@ -62,13 +62,6 @@ plt.show()
 #zamiana plci na numeric
 df = pd.get_dummies(df, drop_first=True)
 
-# Macierz korelacji
-plt.figure(figsize=(10, 8))
-correlation_matrix = df.corr()
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
-plt.title("Macierz korelacji zmiennych")
-plt.show()
-
 
 #imputacja średnią dla kolumn numerycznych
 df.fillna(df.mean(), inplace=True)
