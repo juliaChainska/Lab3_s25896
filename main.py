@@ -122,3 +122,10 @@ r2 = r2_score(y_test, y_pred)
 print(f"MAE (zoptymalizowany model): {mae}")
 print(f"MSE (zoptymalizowany model): {mse}")
 print(f"R² (zoptymalizowany model): {r2}")
+
+
+with open('results.txt', 'w') as file:
+        file.write(f'Model results after optimalization:\n'
+                   f'\tMSE: {mse}\n'
+                   f'\tMAE: {mae}\n'
+                   f'\tR2: {r2}')
