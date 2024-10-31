@@ -8,19 +8,14 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import GridSearchCV
 
 
-df = pd.read_csv('/Users/juliachainska/Downloads/CollegeDistance.csv')
+df = pd.read_csv('./CollegeDistance.csv')
 df = df.drop(columns=['rownames'])
 
 #spawdzanie brakujących wartości (w tym zbiorze nie ma)
 missing_values = df.isnull().sum()
 
 
-# WYKRESY
-# Histogram dla każdej zmiennej numerycznej
-# df.hist(bins=15, figsize=(15, 10), layout=(3, 3))
-# plt.suptitle("Histogramy zmiennych numerycznych")
-# plt.show()
-
+#wykresy
 numeric_cols = df.select_dtypes(include=['float64', 'int64']).columns.tolist()
 n_cols = len(numeric_cols)
 
