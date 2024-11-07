@@ -1,7 +1,6 @@
 # Lab4-s25896 - Score prediction
 
-Aplikacja Flask przewidująca wartość zmiennej `score` na podstawie danych dotyczących wykształcenia i tła społecznego. Aplikacja wykorzystuje wytrenowany model regresji do przewidywania wyniku (oceny), który może być pomocny w analizie wyników edukacyjnych.
-
+Aplikacja Flask przewidująca wartość zmiennej `score` na podstawie danych dotyczących wykształcenia i tła społecznego. Aplikacja wykorzystuje wytrenowany model regresji do przewidywania wyniku (score).
 ## Spis treści
 - [Wymagania](#wymagania)
 - [Klonowanie repozytorium](#klonowanie-repozytorium)
