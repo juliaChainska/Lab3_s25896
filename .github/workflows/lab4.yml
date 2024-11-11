@@ -21,10 +21,18 @@ jobs:
         with:
           python-version: '3.x'
 
+      # - name: Install dependencies
+      #   run: | 
+      #     python -m pip install --upgrade pip
+      #     pip install -r requirements.txt
+
       - name: Install dependencies
-        run: | 
-          python -m pip install --upgrade pip
+        run: |
           pip install -r requirements.txt
+
+      # Uruchom skrypt treningowy, aby wygenerować model.pkl
+      - name: Train model and generate model.pkl
+        run: python train_model.py
 
       # Zaloguj do Dockera
       - name: Log in to Docker Hub
